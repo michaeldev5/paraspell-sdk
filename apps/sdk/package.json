@@ -1,6 +1,6 @@
 {
   "name": "@paraspell/sdk",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "SDK for ParaSpell XCM/XCMP tool for developers",
   "repository": "@paraspell/sdk",
   "license": "MIT",
@@ -28,8 +28,7 @@
     "updatePallets": "node --loader ts-node/esm --experimental-specifier-resolution=node ./src/scripts/updatePallets.ts",
     "release": "pnpm test && standard-version && git push --follow-tags && pnpm publish --no-git-checks --access=public",
     "test": "vitest run --coverage",
-    "compile": "tsc --noEmit",
-    "runAll": "pnpm compile && pnpm format:write && pnpm lint && pnpm test"
+    "compile": "tsc --noEmit"
   },
   "dependencies": {
     "@babel/core": "^7.20.12",
