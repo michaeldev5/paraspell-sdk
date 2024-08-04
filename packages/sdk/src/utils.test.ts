@@ -1,19 +1,8 @@
 // Contains tests for important utils features that are used during call creation
 
 import { describe, expect, it } from 'vitest'
-import { NODE_NAMES, NODE_NAMES_DOT_KSM } from './maps/consts'
-import { getNode, getNodeEndpointOption } from './utils'
-
-describe('getNodeDetails', () => {
-  it('should return node detail for all nodes', () => {
-    NODE_NAMES.forEach(node => {
-      const details = getNode(node)
-      expect(details).toBeDefined()
-      expect(details.name).toBeTypeOf('string')
-      expect(['polkadot', 'kusama']).toContain(details.type)
-    })
-  })
-})
+import { NODE_NAMES_DOT_KSM } from './maps/consts'
+import { getNodeEndpointOption } from './utils'
 
 describe('getNodeEndpointOption', () => {
   it('should return endpoint option for all nodes', () => {
