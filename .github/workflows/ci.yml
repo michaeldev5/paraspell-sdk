@@ -26,7 +26,7 @@ jobs:
       - run: pnpm compile
       - run: pnpm format:check
       - run: pnpm lint:check
-      - run: pnpm test
+      - run: pnpm test:cov
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.5.0
         with:
