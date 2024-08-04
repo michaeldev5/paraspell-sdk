@@ -24,6 +24,16 @@ import type ParachainNode from './nodes/ParachainNode'
 import { type HexString } from '@polkadot/util/types'
 import { getRelayChainSymbol } from './pallets/assets'
 
+export const createAccountKey20 = (api: ApiPromise, account: string) => {
+  console.log('Generating AccountKey20 address')
+  return api.createType('AccountKey20', account).toHex()
+}
+
+export const createAccountKey40 = (api: ApiPromise, account: string) => {
+  console.log('Generating AccountKey20 address')
+  return api.createType('AccountKey20', account).toHex()
+}
+
 export const createAccID = (api: ApiPromise, account: string): HexString => {
   console.log('Generating AccountId32 address')
   return api.createType('AccountId32', account).toHex()
